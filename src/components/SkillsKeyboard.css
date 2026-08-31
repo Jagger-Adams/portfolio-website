@@ -1,0 +1,14 @@
+.skillKeyboardRoot{
+    justify-self: right;
+    width:70%;
+    transform: rotateX(50deg) rotateZ(-15deg);
+    transform-style: preserve-3d;
+}
+
+.skillKeyboardKeys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    perspective: 900px;
+    gap: 2px;
+}
