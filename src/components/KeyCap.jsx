@@ -1,17 +1,19 @@
 import './KeyCap.css';
 
-function KeyCap({ letter, iconPath, color, pressed, height = 50, onMouseEnter, onMouseLeave }) {
+function KeyCap({ letter, iconPath, color, pressed, height = 70, onMouseEnter, onMouseLeave }) {
   return (
     <div
         className="keyCap"
         style={{
             '--key-height': `${height}px`,
-            transform: pressed ? `translateZ(${height/3}px)` : `translateZ(${height}px)`,
+            transform: pressed ? `translateZ(${height/2}px)` : `translateZ(${height}px)`,
         }}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
     >
-      <div className="keyTop" style={{ background: color }}>
+      <div className="keyBase" style={{ background: color, filter: 'brightness(0.5)' }}/>
+      <div className="keyTop" 
+            style={{ background: color }} 
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}>
         {iconPath && <img src={iconPath} className="keyIcon" alt="" />}
         {!iconPath && letter}
       </div>
