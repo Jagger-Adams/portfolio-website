@@ -3,14 +3,12 @@ import { useState, useRef, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom';
 import Hamburger from './Hamburger';
 
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
 function Header() {
     const location = useLocation();
     const containerRef = useRef(null);
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
     const [menuExpanded, setMenuExpanded] = useState(false);
-    const [theme, setTheme] = useState(prefersDark ? 'dark' : 'light');
+    const [theme, setTheme] = useState('dark');
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);

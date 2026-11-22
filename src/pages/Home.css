@@ -41,13 +41,24 @@
 }
 
 .heroTextBox {
+    align-self: center;     /* shrink to content instead of stretching full height */
     justify-content: center;
-    gap: var(--space-s);
+    gap: var(--space-m, var(--space-s));
     padding: var(--space-l);
     border-radius: 16px;
     background-color: rgba(20, 20, 24, 0.6);
     backdrop-filter: blur(4px);
     color: #e8eaf0;
+}
+
+.heroTextBox .h1 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+.heroTextBox p {
+    margin: 0;
+    font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+    line-height: 1.6;
 }
 
 @media (max-width: 768px) {

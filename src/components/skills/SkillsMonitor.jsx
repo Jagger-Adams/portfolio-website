@@ -6,10 +6,14 @@ function SkillsMonitor({ skill }) {
         <div className="monitorFrame">
             <div className="monitorScreen">
               {skill ? (
-                <div className="monitorContent col" key={skill.label}>
+                <div
+                  className="monitorContent"
+                  key={skill.label}
+                  style={{ '--skill-color': skill.color }}
+                >
+                  <img src={skill.iconPath} className="monitorIcon" alt="" />
                   <span className="monitorLabel">{skill.label}</span>
                   <span className="monitorDescription">{skill.description}</span>
-                  <img src={skill["iconPath"]} className="monitorIcon" alt="" />
                 </div>
               ) : (
                 <div className="monitorContent monitorIdle" key="idle">
