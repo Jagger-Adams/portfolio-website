@@ -1,0 +1,8 @@
+.experienceSection {
+    gap: var(--space-s);
+    padding: var(--space-s);
+}
+
+.experienceTitle {
+    font-weight: 700;
+}

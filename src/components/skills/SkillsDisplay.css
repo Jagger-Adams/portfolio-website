@@ -1,0 +1,28 @@
+.skillsSection {
+    width: 100%;
+    padding: var(--space-m);
+    gap: var(--space-m);
+}
+
+.skillsTitle {
+    font-weight: 700;
+    text-align: center;
+}
+
+.skillsDisplay {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .skillsDisplay {
+        flex-direction: column;
+    }
+    .skillsMonitor,
+    .skillKeyboardStage {
+        flex: none;       
+        width: 100%;
+    }
+}

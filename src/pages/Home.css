@@ -1,0 +1,72 @@
+.homeSection {
+    position: relative;
+    min-height: calc(100svh - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeHero {
+    overflow: hidden;
+    clip-path: inset(0);
+    background-color: var(--color-bg);
+}
+
+.homeHeroContent {
+    position: relative;
+    z-index: 1;             
+    align-self: stretch;    
+    width: 100%;
+    padding: var(--space-l);
+    gap: var(--space-l);
+}
+
+.heroImageBox,
+.heroTextBox {
+    flex: 1 1 0;            
+    min-width: 0;
+}
+
+.heroImageBox {
+    position: relative;     
+}
+
+.heroImage {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+}
+
+.heroTextBox {
+    justify-content: center;
+    gap: var(--space-s);
+    padding: var(--space-l);
+    border-radius: 16px;
+    background-color: rgba(20, 20, 24, 0.6);
+    backdrop-filter: blur(4px);
+    color: #e8eaf0;
+}
+
+@media (max-width: 768px) {
+    .homeSection{
+        min-height: 0;
+    }
+
+    .homeHero{
+        min-height: calc(100svh - var(--header-height));
+    }
+
+    .homeHeroContent {
+        flex-direction: column;
+    }
+    .heroImageBox,
+    .heroTextBox {
+        flex: none;
+    }
+    .heroImageBox {
+        height: 40svh;
+    }
+}

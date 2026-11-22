@@ -1,0 +1,10 @@
+services:
+  frontend:
+    container_name: portfolio_frontend
+    build: .
+    restart: unless-stopped
+    networks: [web]
+
+networks:
+  web:
+    external: true

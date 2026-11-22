@@ -1,0 +1,84 @@
+.keyCap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  transform-style: preserve-3d;
+  transition: transform 130ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.keyBase,
+.keyTop,
+.keyFront,
+.keyLeft,
+.keyCornerNear,
+.keyCornerBack,
+.keyCornerRight {
+  position: absolute;
+}
+
+.keyBase {
+  inset: 0;
+  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px);
+}
+
+.keyTop {
+  inset: 0;
+  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px);
+  transform: translateZ(var(--key-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyFront {
+  left: 12px;
+  width: calc(100% - 24px);
+  top: 100%;
+  height: var(--key-height);
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+.keyLeft {
+  top: 12px;
+  height: calc(100% - 24px);
+  right: 100%;
+  width: var(--key-height);
+  transform-origin: right;
+  transform: rotateY(90deg);
+}
+
+.keyCornerNear {
+  left: 12px;
+  top: 100%;
+  width: 17px;
+  height: var(--key-height);
+  transform-origin: top left;
+  transform: rotateZ(225deg) rotateX(90deg);
+}
+
+.keyCornerBack {
+  left: 0;
+  top: 12px;
+  width: 17px;
+  height: var(--key-height);
+  transform-origin: top left;
+  transform: rotateZ(-45deg) rotateX(90deg);
+}
+
+.keyCornerRight {
+  left: calc(100% - 12px);
+  top: 100%;
+  width: 17px;
+  height: var(--key-height);
+  transform-origin: top left;
+  transform: rotateZ(-45deg) rotateX(90deg);
+}
+
+.keyIcon {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}

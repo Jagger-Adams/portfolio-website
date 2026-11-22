@@ -1,0 +1,10 @@
+.personalSection {
+    width: 100%;
+    padding: var(--space-m);
+    gap: var(--space-m);
+    align-items: center;
+}
+
+.personalTitle {
+    font-weight: 700;
+}

@@ -1,13 +1,20 @@
 import './Header.css'
 import { useState, useRef, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom';
-import Hamburger from '../components/Hamburger';
+import Hamburger from './Hamburger';
+
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 function Header() {
     const location = useLocation();
     const containerRef = useRef(null);
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
     const [menuExpanded, setMenuExpanded] = useState(false);
+    const [theme, setTheme] = useState(prefersDark ? 'dark' : 'light');
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
 
     useEffect(() => {
         function updateIndicator() {
@@ -40,6 +47,13 @@ function Header() {
                     </div>
                     <div className='headerIndicator' style={{ ...indicatorStyle, transition: 'all 0.3s ease' }} />
                 </div>
+                <div className='themeBox row'>
+                    <span className='h3 themeLabel'>Theme</span>
+                    <select className="themeSelect h4" value={theme} onChange={(e) => setTheme(e.target.value)}>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
                 <Hamburger className='hamburger' isOpen={menuExpanded} onClick={() => setMenuExpanded(!menuExpanded)} />
             </div>
             {menuExpanded&&
@@ -48,6 +62,13 @@ function Header() {
                     <NavLink to="/projects">Projects</NavLink>
                     <NavLink to="/resume">Resume</NavLink>
                     <NavLink to="/contact">Contact</NavLink>
+                    <div className='menuThemeBox row'>
+                        <span className='h2 themeLabel'>Theme</span>
+                        <select className="themeSelect h4" value={theme} onChange={(e) => setTheme(e.target.value)}>
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
                 </div>
             }
         </div>

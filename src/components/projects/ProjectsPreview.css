@@ -1,0 +1,34 @@
+.projectsPreviewSection {
+    width: 100%;
+    padding: var(--space-m);
+    gap: var(--space-m);
+    align-items: center;
+}
+
+.projectsPreviewRow {
+    width: 100%;
+    gap: var(--space-m);
+}
+
+.projectsPreviewBtn {
+    padding: var(--space-s) var(--space-l);
+    border-radius: 999px;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.projectsPreviewBtn:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .projectsPreviewRow {
+        flex-direction: column;
+    }
+}
+
+.projectsPreviewTitle {
+    font-weight: 700;
+}

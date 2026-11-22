@@ -19,6 +19,9 @@ function KeyCap({ letter, iconPath, color, pressed, height = 70, onMouseEnter, o
       </div>
       <div className="keyFront" style={{ background: color, filter: 'brightness(0.55)' }} />
       <div className="keyLeft" style={{ background: color, filter: 'brightness(0.4)' }} />
+      <div className="keyCornerNear" style={{ background: color, filter: 'brightness(0.46)' }} />
+      <div className="keyCornerBack" style={{ background: color, filter: 'brightness(0.34)' }} />
+      <div className="keyCornerRight" style={{ background: color, filter: 'brightness(0.5)' }} />
     </div>
   );
 }

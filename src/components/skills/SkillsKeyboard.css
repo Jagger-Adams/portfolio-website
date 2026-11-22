@@ -1,14 +1,12 @@
 .skillKeyboardStage {
-    margin-top: 150px;
-    width: 35%;
-    justify-self: center;
-    align-self: center;
+    flex: 1 1 0;
+    min-width: 0;
     perspective: 1400px;
 }
 
 .skillKeyboardRoot {
   position: relative;
-  transform: rotateX(50deg) rotateZ(-28deg);
+  transform: rotateX(50deg) rotateZ(-28deg) scale(0.65);
   transform-style: preserve-3d;
 }
 

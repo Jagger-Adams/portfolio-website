@@ -1,0 +1,84 @@
+.skillsMonitor {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monitorFrame {
+    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+    padding: 8px;
+    background-color: black;
+    display: flex;
+}
+
+.monitorScreen {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background-color: rgb(56, 56, 56);
+    display: flex;
+}
+
+.monitorScreen p {
+    margin: 0;
+}
+
+.monitorContent {
+    box-sizing: border-box;
+    flex: 1;
+    min-height: 0;
+    padding: var(--space-s);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-s);
+    color: #e8eaf0;
+    animation: fadeUp 0.4s ease;
+}
+
+.monitorIdle {
+    justify-content: center;
+    color: var(--color-muted);
+    font-size: clamp(0.85rem, 1.0vw, 1.05rem);
+}
+
+.monitorLabel {
+    font-size: clamp(1.1rem, 1.8vw, 1.6rem);
+    font-weight: 700;
+    text-align: center;
+}
+
+.monitorDescription {
+    min-height: 0;
+    overflow-y: auto;
+    text-align: center;
+    font-size: clamp(0.75rem, 0.8vw, 0.9rem);
+    line-height: 1.5;
+}
+
+.monitorIcon {
+    flex-shrink: 0;
+    margin-top: auto;
+    height: 40%;
+    width: 100%;
+    object-fit: contain;    
+}
+
+.monitorStand {
+    background-color: rgb(36, 36, 36);
+    width: 10%;
+    height: 28px;
+}
+
+.monitorBase {
+    background-color: black;
+    width: 30%;
+    height: 28px;
+}

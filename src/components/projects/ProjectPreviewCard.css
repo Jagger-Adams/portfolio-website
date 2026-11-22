@@ -1,0 +1,52 @@
+.projPreviewCard {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: var(--space-l);
+    gap: var(--space-m);
+    border-radius: 16px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.projPreviewLink {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}
+
+.projPreviewLink::after {
+    content: "\2197";
+    display: inline-block;
+    margin-left: 0.3em;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+}
+
+.projPreviewLink:hover {
+    text-decoration-thickness: 2px;
+}
+
+.projPreviewLink:hover::after {
+    transform: translate(2px, -2px);
+}
+
+.projPreviewDescription {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.projPreviewTags {
+    flex-wrap: wrap;
+    margin: auto 0 0;
+    padding: 0;
+    list-style: none;
+    gap: var(--space-s);
+}
+
+.projPreviewTag {
+    padding: var(--space-xs) var(--space-s);
+    border-radius: 999px;
+    background-color: var(--color-surface2);
+    border: 1px solid var(--color-border);
+}

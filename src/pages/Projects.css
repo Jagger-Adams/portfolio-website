@@ -1,0 +1,6 @@
+.projSection{
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-l);
+    gap: var(--space-xl);
+}

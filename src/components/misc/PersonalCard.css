@@ -1,0 +1,40 @@
+.personalCard {
+    width: 100%;
+    padding: var(--space-l);
+    gap: var(--space-m);
+    border-radius: 16px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.personalCardTitle {
+    font-weight: 700;
+}
+
+.personalCardImages {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: var(--space-m);
+}
+
+.personalCardItem {
+    flex: 1 1 calc(25% - var(--space-m));
+    min-width: 140px;
+}
+
+.personalCardImage {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+    .personalCardItem {
+        flex-basis: calc(50% - var(--space-m));
+    }
+}

@@ -46,6 +46,26 @@ a.active{
     gap: var(--space-xs);
 }
 
+.themeBox,
+.menuThemeBox{
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.themeLabel{
+    color: var(--color-muted);
+}
+
+.themeSelect{
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
 .hamburger{
     display: none;
 }
@@ -60,8 +80,14 @@ a.active{
     padding: var(--space-xs);
 }
 
+.menuThemeBox{
+    justify-content: space-between;
+    padding: var(--space-xs);
+}
+
 @media (max-width: 768px) {
-    .headerAnimationBox{
+    .headerAnimationBox,
+    .themeBox{
         display: none;
     }
 

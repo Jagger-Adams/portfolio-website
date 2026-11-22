@@ -1,0 +1,15 @@
+.resumeSection {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-l);
+}
+
+.resumeFrame {
+    width: 100%;
+    max-width: 900px;
+    height: calc(100vh - var(--header-height) - 2 * var(--space-l));
+    min-height: 500px;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background-color: var(--color-surface);
+}
